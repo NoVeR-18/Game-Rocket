@@ -1466,6 +1466,10 @@ MonoBehaviour:
   _turboEnergyButton: {fileID: 1145599908807968279}
   _fullEnergyText: {fileID: 1710269145741982328}
   _turboEnergyText: {fileID: 3490216075322817647}
+  _wings: {fileID: 0}
+  _fuselage: {fileID: 0}
+  _reactor: {fileID: 0}
+  _autopilot: {fileID: 0}
 --- !u!1 &6628015691855645832
 GameObject:
   m_ObjectHideFlags: 0
@@ -3290,6 +3294,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3330444384497027947}
     m_Modifications:
+    - target: {fileID: 1033083915978851026, guid: b6f8904216a88be468a9b525cab03155,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -58.360016
+      objectReference: {fileID: 0}
     - target: {fileID: 7034844260584277568, guid: b6f8904216a88be468a9b525cab03155,
         type: 3}
       propertyPath: m_Pivot.x
@@ -3373,7 +3382,7 @@ PrefabInstance:
     - target: {fileID: 7034844260584277568, guid: b6f8904216a88be468a9b525cab03155,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -72.907
+      value: -72.90701
       objectReference: {fileID: 0}
     - target: {fileID: 7034844260584277568, guid: b6f8904216a88be468a9b525cab03155,
         type: 3}

@@ -32,7 +32,7 @@ public class ProgressBar : MonoBehaviour
         currentBackgroundIndex = PlayerPrefs.GetInt("BackgroundIndex", 0);
         currentLowerBarIndex = PlayerPrefs.GetInt("LowerBarIndex", 0);
         _background.sprite = _backgroundImages[currentBackgroundIndex];
-        _lowerBarImage.sprite = _backgroundImages[currentBackgroundIndex];
+        _lowerBarImage.sprite = _loverBars[currentLowerBarIndex];
         SetProgress();
     }
 
@@ -67,7 +67,7 @@ public class ProgressBar : MonoBehaviour
             currentBackgroundIndex = backgroundStage;
             currentLowerBarIndex = backgroundStage;
             _background.sprite = _backgroundImages[currentBackgroundIndex];
-            _lowerBarImage.sprite = _backgroundImages[currentLowerBarIndex];
+            _lowerBarImage.sprite = _loverBars[currentLowerBarIndex];
             PlayerPrefs.SetInt("BackgroundIndex", currentBackgroundIndex);
             PlayerPrefs.SetInt("LowerBarIndex", currentBackgroundIndex);
             PlayerPrefs.Save();
@@ -76,8 +76,9 @@ public class ProgressBar : MonoBehaviour
         if (progressToUi >= 1f)
         {
             currentBackgroundIndex = 0;
+            currentLowerBarIndex = 0;
             _background.sprite = _backgroundImages[currentBackgroundIndex];
-            _lowerBarImage.sprite = _backgroundImages[currentBackgroundIndex];
+            _lowerBarImage.sprite = _loverBars[currentLowerBarIndex];
             PlayerPrefs.SetInt("BackgroundIndex", currentBackgroundIndex);
             PlayerPrefs.Save();
             progress = 0;
