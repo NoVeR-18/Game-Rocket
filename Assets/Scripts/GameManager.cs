@@ -75,4 +75,12 @@ public class GameManager : MonoBehaviour
         // Например, замена спрайта или текстуры на игровом объекте игрока
         _gameUi.SetSkin(skin.PreviewImage);
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape) && _currentOpenedTab != _gameUi)
+        {
+            CloseWindow();
+        }
+    }
 }
